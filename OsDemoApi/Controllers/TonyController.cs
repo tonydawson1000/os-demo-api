@@ -15,10 +15,8 @@ namespace OsDemoApi.Controllers
         [HttpGet]
         public string Get()
         {
-            // Get the local computer host name.
-            var hostName = Dns.GetHostName();
-
-            return "Computer name :" + hostName;
+            // Get the 'pod' host name.
+            return $"Host: {Environment.MachineName}";
         }
     }
 
