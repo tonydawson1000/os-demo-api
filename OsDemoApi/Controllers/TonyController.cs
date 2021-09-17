@@ -16,7 +16,7 @@ namespace OsDemoApi.Controllers
         public string Get()
         {
             // Get the 'pod' host name.
-            return $"Hello World - Host: '{Environment.MachineName}' - {DateTime.UtcNow}";
+            return $"Hello World - ITS FRIDAY - Host: '{Environment.MachineName}' - {DateTime.UtcNow}";
         }
     }
 
