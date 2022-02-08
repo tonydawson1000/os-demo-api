@@ -1,10 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
 
 namespace OsDemoApi.Controllers
 {
@@ -19,5 +13,4 @@ namespace OsDemoApi.Controllers
             return $"Hello World - ITS FRIDAY - Host: '{Environment.MachineName}' - {DateTime.UtcNow}";
         }
     }
-
 }

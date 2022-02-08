@@ -1,11 +1,12 @@
-#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+# Use Red Hat UBI 8 for 
+FROM registry.access.redhat.com/ubi8/dotnet-60-runtime AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+#FROM registry.access.redhat.com/ubi8/dotnet-60 AS build
+#NOTE - Having build output folder permission issues with UBI, so build on ms
 WORKDIR /src
 COPY ["OsDemoApi/OsDemoApi.csproj", "OsDemoApi/"]
 RUN dotnet restore "OsDemoApi/OsDemoApi.csproj"
